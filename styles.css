@@ -1,0 +1,35 @@
+@import url("styles/reset.css");
+@import url("styles/header.css");
+
+/*Variables de color*/
+:root {
+    --color-de-fondo: #F5F5F5;
+    --color-de-link: #000;
+    --color-de-texto: #000000;
+}
+
+html,
+body {
+    background-color: var(--color-de-fondo);
+    font-family: "Changa", sans-serif;
+    color: var(--color-de-texto);
+    line-height: 1;
+    width: 100%;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-de-link);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
