@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "name": "Darth Vader",
+      "price": "50",
+      "image": "#",
+      "id": "1"
+    },
+    {
+      "name": "Flash",
+      "price": "25",
+      "image": "#",
+      "id": "2"
+    },
+    {
+      "name": "Batman",
+      "price": "35",
+      "image": "#",
+      "id": "3"
+    },
+    {
+      "id": "aa12",
+      "name": "Hulk",
+      "price": "25",
+      "image": "www"
+    },
+    {
+      "id": "9861",
+      "name": "Spider Man",
+      "price": "10",
+      "image": "www"
+    }
+  ]
+}
