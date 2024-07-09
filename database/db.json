@@ -19,16 +19,16 @@
       "id": "3"
     },
     {
-      "id": "aa12",
-      "name": "Hulk",
-      "price": "25",
-      "image": "www"
+      "id": "4",
+      "name": "bomberman",
+      "price": "800",
+      "image": "jojs"
     },
     {
-      "id": "9861",
-      "name": "Spider Man",
-      "price": "10",
-      "image": "www"
+      "id": "5",
+      "name": "pelota",
+      "price": "800",
+      "image": "jfnkerfger"
     }
   ]
 }

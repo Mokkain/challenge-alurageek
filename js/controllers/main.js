@@ -31,6 +31,8 @@ function createCard(name, price, image, id) {
 }
 
 function deleteCard (card){
+    
+    console.log(deleteCard);
     card.remove()
 }
  
@@ -55,20 +57,21 @@ const render = async () => {
 
 };
 
-form.addEventListener("submit", (e)=> {
+form.addEventListener("submit", async (e)=> {
     e.preventDefault();
 
     const name = document.querySelector("[data-name ]").value;
     const price = document.querySelector("[data-price ]").value;
     const image = document.querySelector("[data-image ]").value;
 
-    servicesProducts
-    .createProducts(name, price, image)
-    .then((res)=> {
-        console.log(res);
-        createCard(name, price, image, res.id);
-    })
-    .catch((error)=>console.log(error));
+    try {
+        const newId = await servicesProducts.getId();
+
+        await servicesProducts.createProducts(name, price, image, newId);
+        createCard(name, price, image, newId);
+    } catch (error) {
+        console.log(error);
+    }
 });
 
 render();

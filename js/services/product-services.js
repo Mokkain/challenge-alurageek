@@ -4,7 +4,7 @@ const productList = () => {
         .catch((error) => console.log(error));
 };
 
-const createProducts = (name, price, image) => {
+const createProducts = (name, price, image, id) => {
     return fetch("http://localhost:3000/products", {
         method: "POST",
         headers: {
@@ -14,6 +14,7 @@ const createProducts = (name, price, image) => {
             name,
             price,
             image,
+            id
         }),
     })
         .then((res) => res.json())
@@ -26,17 +27,26 @@ const deleteProducts = (id) => {
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-            id,
-        }),
     })
         .then((res) => res.json())
         .catch((error) => console.log(error));
+};
+
+const getId = async () => {
+    try {
+        const products = await productList();
+        const maxId = Math.max(...products.map(product => parseInt(product.id, 10) || 0));
+        return (maxId + 1).toString();
+    } catch (error) {
+        console.log(error);
+        return "1"; // Default ID in case of error
+    }
 };
 
 
 export const servicesProducts = {
     productList,
     createProducts,
-    deleteProducts
+    deleteProducts,
+    getId
 };
