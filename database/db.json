@@ -1,34 +1,10 @@
 {
   "products": [
     {
-      "name": "Darth Vader",
-      "price": "50",
-      "image": "#",
-      "id": "1"
-    },
-    {
-      "name": "Flash",
-      "price": "25",
-      "image": "#",
-      "id": "2"
-    },
-    {
-      "name": "Batman",
-      "price": "35",
-      "image": "#",
-      "id": "3"
-    },
-    {
-      "id": "4",
-      "name": "bomberman",
-      "price": "800",
-      "image": "jojs"
-    },
-    {
-      "id": "5",
-      "name": "pelota",
-      "price": "800",
-      "image": "jfnkerfger"
+      "id": "1",
+      "name": "wfewef",
+      "price": "23",
+      "image": "rfef"
     }
   ]
 }
