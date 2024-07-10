@@ -2,9 +2,15 @@
   "products": [
     {
       "id": "1",
-      "name": "wfewef",
+      "name": "oso de peluche",
       "price": "23",
-      "image": "rfef"
+      "image": "#"
+    },
+    {
+      "id": "2",
+      "name": "osa",
+      "price": "45",
+      "image": "dfefe"
     }
   ]
 }
