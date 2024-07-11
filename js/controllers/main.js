@@ -31,7 +31,6 @@ function createCard({ name, price, image, id }) {
         try {
             await servicesProducts.deleteProducts(id); // Call to delete product from server
             card.remove();
-            checkProducts(); // Check if there are no products after deletion
         } catch (error) {
             console.error("Error al eliminar el producto:", error);
         }
@@ -39,16 +38,6 @@ function createCard({ name, price, image, id }) {
 
     productContainer.appendChild(card);
     return card;
-}
-
-// Function to check if there are no products and change the message
-function checkProducts() {
-    
-    if (products.length === 0) {
-        title.innerText = `No se han agregado productos...`;
-    } else {
-        title.innerText = `MIS PRODUCTOS:` ;
-    }
 }
 
 //Add a new product with a new ID
@@ -64,7 +53,6 @@ form.addEventListener("submit", async (e) => {
         const newProduct = await servicesProducts.createProducts(name, price, image, newId);
         if (newProduct) {
             createCard({ name, price, image, id: newId });
-            checkProducts(); // Check the products array after adding a new product
         } else {
             console.error("Error al agregar el nuevo producto.");
         }
@@ -72,17 +60,24 @@ form.addEventListener("submit", async (e) => {
         console.error("Error al agregar el producto.", error);
     }
 
-    form.reset(); 
+    form.reset();
 });
 
 //Initially loads products from the server and creates product cards for each one.
 const render = async () => {
     try {
         const products = await servicesProducts.productList();
+
+        // Check if there are no products and change the message
+        if (products.length === 0) {
+            title.innerText = `No se han agregado productos...`;
+        } else {
+            title.innerText = `Mis Productos:`;
+        }
+
         products.forEach(product => {
             createCard(product);
         });
-        checkProducts(); // Check the products array after loading
     } catch (error) {
         console.error("Error al renderizar los productos:", error);
     }

@@ -20,6 +20,11 @@
     height: 70px;
 }
 
+.logo-img:hover {
+   filter: blur(0.4px);
+}
+
+
 .header__title {
     font-weight: 700;
     font-size: 32px;

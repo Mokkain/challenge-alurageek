@@ -1,9 +1,16 @@
+.form-section {
+    box-sizing: border-box;
+    width: 30%;
+    margin: 0 40px;
+}
+
 .form-section h1 {
     text-align: center;
     font-size: 28px;
     margin: 30px 0;
-    font-weight: 500;
+    font-weight: 600;
 }
+
 
 .form-container {
     display: flex;
@@ -12,48 +19,51 @@
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #f9f9f9; /* Fondo del formulario */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(124, 16, 108, 0.6); /* Sombra */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(124, 16, 108, 0.6);
 }
 
 .form-container input {
-    width: 90%; /* Anchura de los campos de entrada */
+    width: 90%;
     padding: 10px;
-    margin-bottom: 15px; /* Espacio entre campos */
-    border: 1px solid #ccc; /* Borde de los campos */
-    border-radius: 5px; /* Bordes redondeados de los campos */
-    font-size: 16px; /* Tamaño del texto */
+    margin-bottom: 15px;
+    border: 1px solid #650d60;
+    border-radius: 6px;
+    font-size: 16px;
 }
 
 .button-container {
     display: flex;
     justify-content: space-between;
-    width: 90%; /* Para alinear los botones */
+    width: 90%;
 }
 
-.button-submit, .button-clear {
-    width: 48%; /* Anchura de los botones */
+.button-submit,
+.button-clear {
+    width: 48%;
     padding: 10px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    font-weight: 500;
 }
 
 .button-submit {
-    background-color: #762c8f; 
+    background-color: #762c8f;
     color: white;
     border-radius: 15px;
 }
 
 .button-clear {
-    background-color: white; 
+    background-color: white;
     color: rgb(0, 0, 0);
     border: 3px solid #762c8f;
     border-radius: 15px;
 }
 
-.button-submit:hover, .button-clear:hover {
-    opacity: 0.8; /* Efecto hover */
+.button-submit:hover,
+.button-clear:hover {
+    opacity: 0.8;
 }

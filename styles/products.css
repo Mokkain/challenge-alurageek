@@ -1,34 +1,29 @@
 .main-container {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items:flex-start;
     height: 100vh;
     padding: 20px;
     box-sizing: border-box;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .products-section {
+    margin-top: 40px;
     width: 70%;
     height: 50vh; 
     overflow-y: auto; 
     padding-right: 10px;
+    margin-left: 40px;
     resize: vertical; 
-    box-sizing: border-box; /* Incluir el padding en el cálculo del height */
+    box-sizing: border-box; 
     box-shadow: -6px 7px 6px 0 rgba(144, 17, 179, 0.4);
 }
 
-
-.form-section {
-    width: 30%;
-    margin: 0 40px;
-    box-sizing: border-box;
-}
-
 .products__title {
-    margin: 30px 0;
+    margin-bottom: 30px;
     font-size: 28px;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
 }
 
@@ -37,14 +32,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
-    gap: 40px; /* Espacio entre tarjetas */
+    align-items: center;
+    gap: 40px; 
 }
 
 .card {
     background-color: #6c459f;
     color: #FFFFFF;
-    width: calc(100% / 4 - 20px); /* Ajuste del tamaño de la tarjeta */
+    width: calc(100% / 4 - 10px);
     padding: 10px;
     border-radius: 10px;
     border: 3px solid black;

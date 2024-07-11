@@ -13,7 +13,7 @@
 html,
 body {
     background-color: var(--color-de-fondo);
-    font-family: "Changa", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     color: var(--color-de-texto);
     line-height: 1;
     width: 100%;
