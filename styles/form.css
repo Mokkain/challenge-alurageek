@@ -37,6 +37,7 @@
     display: flex;
     justify-content: space-between;
     width: 90%;
+    box-sizing: border-box;
 }
 
 .button-submit,
@@ -48,6 +49,8 @@
     font-size: 16px;
     cursor: pointer;
     font-weight: 500;
+    box-sizing: border-box;
+    text-align: center; 
 }
 
 .button-submit {
