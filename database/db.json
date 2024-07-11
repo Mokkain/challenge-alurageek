@@ -2,15 +2,51 @@
   "products": [
     {
       "id": "1",
-      "name": "oso de peluche",
-      "price": "23",
-      "image": "#"
+      "name": "Pareja ovejera",
+      "price": "150",
+      "image": "https://cdn.pixabay.com/photo/2020/10/03/14/29/sheep-5623676_1280.jpg"
     },
     {
       "id": "2",
-      "name": "osa",
-      "price": "45",
-      "image": "dfefe"
+      "name": "Cuna de ositos",
+      "price": "350",
+      "image": "https://cdn.pixabay.com/photo/2016/06/20/15/46/bed-1469127_1280.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Ranitas penosas",
+      "price": "320",
+      "image": "https://cdn.pixabay.com/photo/2018/05/31/15/06/see-no-evil-3444212_1280.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Conejito bebé",
+      "price": "100",
+      "image": "https://cdn.pixabay.com/photo/2016/05/05/21/56/soft-toy-1374872_1280.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Cuna de elefantitos",
+      "price": "400",
+      "image": "https://cdn.pixabay.com/photo/2016/09/18/13/43/stroller-1678232_1280.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Osito enojado",
+      "price": "80",
+      "image": "https://cdn.pixabay.com/photo/2018/02/06/23/24/teddy-3135954_1280.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Dúo de minions",
+      "price": "600",
+      "image": "https://cdn.pixabay.com/photo/2016/05/17/11/53/minions-1397955_1280.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Ositos en la nieve",
+      "price": "300",
+      "image": "https://cdn.pixabay.com/photo/2016/03/04/08/35/teddy-bears-1235581_1280.jpg"
     }
   ]
 }

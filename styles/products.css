@@ -1,20 +1,101 @@
-.products-container{
-    background-color: #f1f1f1;
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: flex-start;
 }
 
-.card{
-    background-color: #9747FF;
+.products-section {
+    width: 70%;
+    height: 50vh; 
+    overflow-y: auto; 
+    padding-right: 10px;
+    resize: vertical; 
+    box-sizing: border-box; /* Incluir el padding en el cálculo del height */
+    box-shadow: -6px 7px 6px 0 rgba(144, 17, 179, 0.4);
+}
+
+
+.form-section {
+    width: 30%;
+    margin: 0 40px;
+    box-sizing: border-box;
+}
+
+.products__title {
+    margin: 30px 0;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.products-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px; /* Espacio entre tarjetas */
+}
+
+.card {
+    background-color: #6c459f;
     color: #FFFFFF;
-    width: calc(100%/4);
+    width: calc(100% / 4 - 20px); /* Ajuste del tamaño de la tarjeta */
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 3px solid black;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    gap: 10px;
 }
 
-.card-container--info{
+.img-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(252, 252, 252, 1));
+    border-radius: 5px;
+    border: 3px solid black;
+}
+
+.card-container--info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container--value {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-button {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+.delete-icon {
+    margin-left: 5px;
+    width: 18px;
+    height: 18px;
+    max-width: 100%;
 }

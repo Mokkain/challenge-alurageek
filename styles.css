@@ -1,6 +1,7 @@
 @import url("styles/reset.css");
 @import url("styles/header.css");
 @import url("styles/products.css");
+@import url("styles/form.css");
 
 /*Variables de color*/
 :root {

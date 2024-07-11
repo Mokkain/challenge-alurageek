@@ -2,9 +2,7 @@ import { servicesProducts } from "../services/product-services.js";
 
 const productContainer = document.querySelector("[data-product]");
 const form = document.querySelector("[data-form]");
-
-//Array to store the products obtained from the server
-let products = []; 
+const title = document.getElementById("title");
 
 //Function to create a product card
 function createCard({ name, price, image, id }) {
@@ -20,19 +18,20 @@ function createCard({ name, price, image, id }) {
             <p>${name}</p>
             <div class="card-container--value">
                 <p>$ ${price}</p>
-                <button class="delete-button" data-id="${id}">
-                    <img src="assets/img/delete.svg" alt="Eliminar">
+                <button type="button" class="delete-button" data-id="${id}">
+                    <img class="delete-icon" src="assets/img/eliminar.png" alt="Eliminar">
                 </button>
             </div>
         </div>
     `;
     //Handling for deleting product
     const deleteButton = card.querySelector(".delete-button");
-
-    deleteButton.addEventListener("click", async () => {
+    deleteButton.addEventListener("click", async (e) => {
+        e.preventDefault();
         try {
             await servicesProducts.deleteProducts(id); // Call to delete product from server
-            deleteCard(card, id);
+            card.remove();
+            checkProducts(); // Check if there are no products after deletion
         } catch (error) {
             console.error("Error al eliminar el producto:", error);
         }
@@ -42,27 +41,18 @@ function createCard({ name, price, image, id }) {
     return card;
 }
 
-//Function to delete a product card from DOM & update the local array "products"
-function deleteCard(card, id) {
-    card.remove();
-    products = products.filter(product => product.id !== id);
+// Function to check if there are no products and change the message
+function checkProducts() {
+    
+    if (products.length === 0) {
+        title.innerText = `No se han agregado productos...`;
+    } else {
+        title.innerText = `MIS PRODUCTOS:` ;
+    }
 }
 
-//Initially loads products from the server and creates product cards for each one.
-const render = async () => {
-    try {
-        products = await servicesProducts.productList();
-        products.forEach(product => {
-            createCard(product);
-        });
-    } catch (error) {
-        console.error("Error al renderizar los productos:", error);
-    }
-};
-
-//Add a new product with a new ID in the local array
+//Add a new product with a new ID
 form.addEventListener("submit", async (e) => {
-
     e.preventDefault();
 
     const name = document.querySelector("[data-name]").value;
@@ -74,7 +64,7 @@ form.addEventListener("submit", async (e) => {
         const newProduct = await servicesProducts.createProducts(name, price, image, newId);
         if (newProduct) {
             createCard({ name, price, image, id: newId });
-            products.push({ name, price, image, id: newId });
+            checkProducts(); // Check the products array after adding a new product
         } else {
             console.error("Error al agregar el nuevo producto.");
         }
@@ -84,5 +74,18 @@ form.addEventListener("submit", async (e) => {
 
     form.reset(); 
 });
+
+//Initially loads products from the server and creates product cards for each one.
+const render = async () => {
+    try {
+        const products = await servicesProducts.productList();
+        products.forEach(product => {
+            createCard(product);
+        });
+        checkProducts(); // Check the products array after loading
+    } catch (error) {
+        console.error("Error al renderizar los productos:", error);
+    }
+};
 
 render();
