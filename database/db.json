@@ -53,14 +53,6 @@
       "name": "Ositos en la nieve",
       "price": "300",
       "image": "https://cdn.pixabay.com/photo/2016/03/04/08/35/teddy-bears-1235581_1280.jpg"
-    },
-    {
-      "id": "10",
-      "name": "Minion otoñal",
-      "price": "270",
-      "image": "https://cdn.pixabay.com/photo/2015/09/28/16/46/minions-962348_1280.jpg"
     }
   ]
 }
-
-
